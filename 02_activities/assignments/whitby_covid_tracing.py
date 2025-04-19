@@ -12,6 +12,9 @@ import seaborn as sns
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
+# Set a fixed random seed
+# np.random.seed(30)
+
 # Constants representing the parameters of the model
 ATTACK_RATE = 0.10
 TRACE_SUCCESS = 0.20

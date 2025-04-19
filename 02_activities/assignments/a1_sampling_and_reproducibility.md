@@ -10,11 +10,37 @@ Modify the number of repetitions in the simulation to 100 (from the original 100
 
 Alter the code so that it is reproducible. Describe the changes you made to the code and how they affected the reproducibility of the script file. The output does not need to match Whitby’s original blogpost/graphs, it just needs to produce the same output when run multiple times
 
-# Author: YOUR NAME
+# Author: Shilan Dong
 
 ```
-Please write your explanation here...
+There are 3 stages of sampling, which align with the processes described in Andrew Whitby's blog post.
+1. Infection Sampling
+Sampling Procedure: A simple random sample from the population (1,000 individuals) to determine who gets infected.
+Function: infected_indices = np.random.choice(ppl.index, size=int(len(ppl) * ATTACK_RATE), replace=False)
+Sample Size: 10% of all individuals (ATTACK_RATE = 0.10), resulting in 100 infections out of 1,000 simulated people.
+Sampling Frame: All individuals (200 attending a wedding and 800 attending brunches).
+Distribution: Uniform random sampling without replacement. Infections are assigned uniformly across all individuals, regardless of their event type.
+Relation to Blog Post: This models the assumption that infections occur equally across events (weddings and brunches)
+2. Primary Contact Tracing Sampling
+Sampling Procedure: Each infected person has a fixed 20% probability of being successfully traced.
+Function: ppl.loc[ppl['infected'], 'traced'] = np.random.rand(sum(ppl['infected'])) < TRACE_SUCCESS
+Sample Size: 20% of infected individuals (TRACE_SUCCESS = 0.20). For example, if 100 are infected, ~20 are traced.
+Sampling Frame: All infected individuals (subset of the 1,000 people).
+Distribution: Bernoulli trials with success probability TRACE_SUCCESS. Each infected individual has an independent 20% chance of being traced.
+Relation to Blog Post: This reflects the real-world limitation where only a fraction of infections are successfully traced. The blog post emphasizes that this step introduces bias because subsequent tracing depends on this initial sample.
+3: Secondary Contact Tracing
+Sampling Procedure: If two or more infected individuals are traced from a particular event type, all infected individuals from that event type are considered traced.
+Function: ppl.loc[ppl['event'].isin(events_traced) & ppl['infected'], 'traced'] = True
+Sample Size: Varies dynamically based on primary tracing outcomes.
+Sampling Frame: Infected individuals who attended events where at least two infections were already traced.
+Distribution: Indirectly based on earlier Bernoulli outcomes and event grouping.
+Relevance to Blog Post: This mimics cluster-based tracing, where certain event types  are more likely to be fully traced if even a couple of cases are found. As the blog highlights, this introduces systematic bias—events like weddings appear more dangerous than they actually are because they are overrepresented in traced data.
 
+The code does not reproduce the graghs from the blog (traced wedding does not show shift towards 0.5).
+
+There is minor shift in both samples. Reproducibility is not achieveable.
+
+To ensure the code is reproducible, a fixed random seed is set.
 ```
 
 
