@@ -40,31 +40,81 @@ For the **Canadian General Social Survey on Giving, Volunteering, and Participat
 
 ## Part A - Survey Design: 
 
-The number of your chosen topic: `#`
+The number of your chosen topic: #3
 
-Describe the purpose of your survey:
-```
+Describe the purpose of your survey:  
+
 write your answer here...
 ```
+This survey aims to investigate how age influences music preferences, focusing on differences in popular music perception across age groups and changes in individual tastes over time. The results will contribute to an academic paper analyzing the relationship between age and musical taste.  
+
 
 Describe your target population, sampling frame, sampling units, and observational units:
-```
+
 write your answer here...
 ```
+Target Population: Adults aged 18+.  
+Sampling Frame:  Social media (Facebook, Reddit music communities) and attendees at local music events (to diversify the sample).  
+Sampling Units:Individual respondents.  
+Sampling Strategy:Stratified Random Sampling:Ensure proportional representation from each age group.   
+
 
 Your 5-10 question survey:
 ```
 1. write your question here...
+1. Which age group do you belong to?**  
+18-25  
+26-35  
+36-45  
+46+ 
 2. write your question here...
+2. What genre(s) do you listen to most frequently? (Select all that apply)**  
+Pop  
+Rock  
+Electronic/Dance  
+Hip-hop/Rap  
+Classical  
+Jazz/Blues  
+Indie/Alternative  
+Country  
+R&B/Soul  
+Other (please specify): _________  
 3. write your question here...
+3. How has your music taste changed compared to 5–10 years ago?**  
+I listen to the same genres  
+I explore more genres now  
+My preferences have shifted significantly  
+Other: _________  
 4. write your question here...
+4. What factors influence your current music choices? (Rank top 3)**  
+Mood/emotions  
+Social setting (friends, events)  
+Nostalgia (music from my youth)  
+Recommendations (algorithms, friends)  
+Cultural relevance (current trends)  
+Other: _________  
 5. write your question here...
+5. Do you actively seek out new music, or prefer familiar songs?**  
+Mostly new music  
+Mostly familiar music  
+A balanced mix
 6. write your question here... (optional)
+6. How do you typically discover music? (Select all that apply)**  
+Streaming recommendations (Spotify, Apple Music)  
+Social media (TikTok, Instagram)  
+Friends/family  
+Live events/concerts  
+Radio/podcasts  
+Other: _________ 
 7. write your question here... (optional)
+7. Do you associate certain genres with specific life stages? (e.g., "I loved pop as a teen but prefer jazz now")**  
+   - ○ Yes (please describe): _________  
+   - ○ No 
 8. write your question here... (optional)
 9. write your question here... (optional)
 10. write your question here... (optional)
 ```
+---  
 
 ## Part B - Survey Evaluation:
 
@@ -73,6 +123,8 @@ Identify and describe survey features:
 ```
 write your answer here
 ```
+The questions directly address the research goal of analyzing age-related trends in music preferences, including both cross-sectional (between age groups) and longitudinal (individual changes over time) perspectives with both closed and open-ended questions. 
+
 
 ## Rubric
 
